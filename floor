@@ -1,0 +1,15 @@
+def floor(arr, target):
+    ans = -1
+    low = 0
+    high = len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] <= target:
+            ans = mid
+            low = mid + 1
+        else:
+            high = mid - 1
+    return ans
+arr = list(map(int, input().split()))
+x = int(input())
+print(floor(arr, x))
