@@ -1,0 +1,15 @@
+def nth_sqrt(n,m):
+    low=0
+    high=n
+    while low<=high:
+        mid=(low+high)//2
+        if mid*n==m:
+            return mid
+        elif mid*n<m:
+            low=mid+1
+        else:
+            high=mid-1
+    return high
+n=int(input("Enter the value of n: "))
+m=int(input("Enter the value of m: "))
+print(nth_sqrt(n,m))    
