@@ -1,27 +1,31 @@
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
-        n = len(nums)
+        # n = len(nums)
 
-        result = [0] * n
+        # result = [0] * n
 
-        left = 0
-        right = n - 1
+        # left = 0
+        # right = n - 1
 
-        pos = n - 1
+        # pos = n - 1
 
-        while left <= right:
+        # while left <= right:
 
-            if abs(nums[left]) > abs(nums[right]):
+        #     if abs(nums[left]) > abs(nums[right]):
 
-                result[pos] = nums[left] ** 2
-                left += 1
+        #         result[pos] = nums[left] ** 2
+        #         left += 1
 
-            else:
+        #     else:
 
-                result[pos] = nums[right] ** 2
-                right -= 1
+        #         result[pos] = nums[right] ** 2
+        #         right -= 1
 
-            pos -= 1
+        #     pos -= 1
 
-        return result
-        
+        # return result
+        arr=[]
+        for i in nums:
+            arr.append(i**2)
+        arr.sort()
+        return arr
